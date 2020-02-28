@@ -1,0 +1,57 @@
+$colorGris1 = #e9ebee
+$colorAzul = #4267b2
+$colorBlanco = white
+html
+    background $colorGris1
+.bg-azul
+    background $colorAzul !important 
+.bg-gris
+    background $colorGris1
+.mas-amigos
+    &::after
+        content initial !important
+.nav-link
+    text-transform initial !important
+.font-family
+    font-family 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+    font-weight bolder
+img.avatar
+    height 1.5rem
+    width 1.5rem
+    border-radius 100%
+    border 1px solid rgba(255,255,255,.2)
+button.mas-opciones
+    color white !important
+    font-size 1.2rem
+    margin-top 0.3rem
+.cargar-imagen-portada
+    position absolute
+    top 1.5rem
+    left 4rem
+    font-size: 1.2rem; color: black !important;
+    &:hover
+        background transparent !important
+ul.menu-navegacion
+    height 3rem
+    li.busqueda
+        width 30%
+        div.logotipo
+            span
+                background transparent
+                border none
+                color $colorBlanco
+                font-size 1.5rem
+        input.input-busqueda
+            border-top-left-radius 3px
+            border-bottom-left-radius 3px
+            background: white;
+            margin-left: 0.4rem;
+            &::placeholder
+                padding-left 0.5rem
+        div.icono-busqueda
+            background $colorGris1
+            padding-left: 1rem;
+            padding-right: 1rem;
+
+ul.menu-left
+    position fixed
