@@ -19,11 +19,12 @@
             date_default_timezone_set("America/Mexico_City");
             $datepost = date("Y-m-d H:i:s");
             $url = "img/covers-posts/".basename($cover["name"]);
-            $sql = "INSERT INTO publicaciones VALUES('','$idUsuario','$datepost','$descripcion','$url',0,0)";
+            $sql = "INSERT INTO publicaciones (id_usuario, fecha_de_publicacion, descipcion, url_imagen, me_gusta, total_me_gusta) VALUES('$idUsuario','$datepost','$descripcion','$url',0,0)";
             try{
                 $claseDataBase->obtenerConexion()->query($sql);
                 header('location:'.$raiz.'modulos/paginas/pagina-principal.php');
             }catch(PDOEXCEPTION $e){
+                echo $sql;
                 echo $e->getMessage();
             }
         }else{

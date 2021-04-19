@@ -9,6 +9,7 @@
             $idUser = $_GET["idUser"];
             $claseConsultas = new consultas();
             $currentUser = $claseConsultas->getDataUser($idUser);
+            $allUsers = $claseConsultas->getAllUsers($_SESSION["uid"]);
         ?>
        
         <?php $titulo = $currentUser['nombres']; $mostrarMenu = true; include "../componentes/header.php"; ?>
